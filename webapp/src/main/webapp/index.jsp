@@ -35,13 +35,13 @@
     </style>
   </head>
   <body>
-    <h1> We provide online classes, Please find contact details in description box </h1>
-    <h2> Trainer Name: SUNNY GODIWAL </h2>
+    <h1> First devOps Lab Project with Jenkins, snonar, ansible and k8s. </h1>
+    <h2> App successfully deployed </h2>
 
     <br>
     <br>
     <h2> App Status  : Up & Running !!! </h2>
-    <h2> Image       : sunnydevops2022/IMAGE_NAME </h2>
+    <h2> Image       : plabs23/IMAGE_NAME </h2>
     <br>
     <div class="color-box blue"></div>
     <div class="color-box red"></div>
