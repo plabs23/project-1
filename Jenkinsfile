@@ -26,10 +26,23 @@ pipeline {
                    '''
             }            
         }
-       stage('BUILD') {
+
+        stage('BUILD') {
             steps {
                 sh 'mvn clean install package'
             }
-        }  
+        }
+
+                stage('SONAR SCANNER') {
+            environment {
+            sonar_token = credentials('SONAR_TOKEN')
+            }
+            steps {
+                sh 'mvn sonar:sonar -Dsonar.projectName=$JOB_NAME \
+                    -Dsonar.projectKey=$JOB_NAME \
+                    -Dsonar.host.url=http://10.0.137.127:9000 \
+                    -Dsonar.token=$sonar_token'
+            }
+        } 
     }
 }      
